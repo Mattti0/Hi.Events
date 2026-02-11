@@ -135,7 +135,7 @@
   background-image: url("/images/backgrounds/nightlife-bg.jpg");
   background-size: cover;
   background-position: center;
-  filter: grayscale(20%);
+  filter: grayscale(100%) contrast(110%);
 }
 
 .backgroundOverlay {
@@ -143,12 +143,10 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    var(--mantine-color-primary-9) 0%,
-    var(--mantine-color-primary-8) 30%,
-    var(--mantine-color-primary-6) 60%,
-    var(--mantine-color-secondary-5) 100%
+    rgba(0, 95, 204, 0.8) 0%,
+    rgba(29, 29, 31, 1) 100%
   );
-  opacity: 0.92;
+  opacity: 0.9;
 }
 
 // Grid pattern overlay
@@ -162,13 +160,9 @@
   background-size: 50px 50px;
 }
 
-// Subtle glow effects
+// Subtle glow effects (Disabled for minimalism)
 .glowEffect {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-  pointer-events: none;
+  display: none;
 }
 
 .glowTop {

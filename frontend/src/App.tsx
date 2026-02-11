@@ -63,12 +63,52 @@ export const App: FC<
             <MantineProvider
                 theme={{
                     colors: {
-                        primary: generateColors(getConfig("VITE_APP_PRIMARY_COLOR", "#40296C") as string),
-                        secondary: generateColors(getConfig("VITE_APP_SECONDARY_COLOR", "#3d0b44") as string),
+                        primary: generateColors("#005FCC"),
+                        secondary: generateColors("#1D1D1F"),
                     },
                     primaryColor: "primary",
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
+                    fontFamilyMonospace: "IBM Plex Mono, monospace",
                     primaryShade: 8,
+                    defaultRadius: 0,
+                    headings: {
+                        fontFamily: "Inter, sans-serif",
+                        fontWeight: "600",
+                    },
+                    components: {
+                        Divider: {
+                            defaultProps: {
+                                color: "#E5E5E5",
+                            },
+                        },
+                        Button: {
+                            defaultProps: {
+                                radius: 0,
+                                fw: 800,
+                            },
+                            styles: {
+                                root: {
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '-0.02em',
+                                },
+                            },
+                        },
+                        Card: {
+                            defaultProps: {
+                                radius: 0,
+                            },
+                        },
+                        TextInput: {
+                            defaultProps: {
+                                radius: 0,
+                            },
+                        },
+                        Select: {
+                            defaultProps: {
+                                radius: 0,
+                            },
+                        },
+                    },
                 }}
             >
                 <HelmetProvider context={props.helmetContext}>
@@ -79,7 +119,7 @@ export const App: FC<
                                 <ThirdPartyScripts/>
                                 <ModalsProvider>
                                     <Helmet>
-                                        <title>{getConfig("VITE_APP_NAME", "Hi.Events")}</title>
+                                        <title>{getConfig("VITE_APP_NAME", "ILMO.")}</title>
                                         <link rel="icon"
                                               type="image/svg+xml"
                                               href={getConfig("VITE_APP_FAVICON", "/favicon.svg")}

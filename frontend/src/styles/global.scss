@@ -1,39 +1,40 @@
 @use "mixins";
 
 :root {
-  --hi-text: var(--mantine-color-primary-9);
-  --hi-primary: var(--mantine-color-primary-9);
-  --hi-secondary:  var(--mantine-color-secondary-1);
-  --hi-secondary-text: var(--mantine-color-primary-8);
-  --hi-color-gray: #f7f6f8;
-  --hi-color-gray-2: #e2e2e2;
-  --hi-color-gray-dark: #838383;
-  --hi-color-money-green: #00b894;
-  --hi-color-blue: var(--mantine-color-primary-4);
+  --hi-text: #1D1D1F;
+  --hi-primary: #005FCC;
+  --hi-secondary: #E5E5E5;
+  --hi-secondary-text: #757575;
+  --hi-color-gray: #E5E5E5;
+  --hi-color-gray-2: #E5E5E5;
+  --hi-color-gray-dark: #757575;
+  --hi-color-money-green: #2A9D8F;
+  --hi-color-blue: #005FCC;
   --hi-link-color: var(--hi-primary);
-  --hi-pink: var(--mantine-color-primary-5);
-  --hi-primary-alt: var(--mantine-color-primary-6);
-  --hi-gradient: linear-gradient(135deg, var(--hi-primary), var(--hi-primary-alt));
-  --hi-scrollbar-thumb: #e1e1e1;
+  --hi-pink: #005FCC;
+  --hi-primary-alt: #1F7A6F;
+  --hi-gradient: none;
+  --hi-scrollbar-thumb: #E5E5E5;
 
-  --hi-color-white: #ffffff;
-  --hi-color-black: #000000;
+  --hi-color-white: #FDFDFD;
+  --hi-color-black: #1D1D1F;
 
-  --hi-spacing-xs: 3px;
-  --hi-spacing-sm: 5px;
-  --hi-spacing-md: 10px;
-  --hi-spacing-lg: 20px;
-  --hi-spacing-xl: 25px;
+  --hi-spacing-xs: 4px;
+  --hi-spacing-sm: 8px;
+  --hi-spacing-md: 16px;
+  --hi-spacing-lg: 32px;
+  --hi-spacing-xl: 64px;
 
-  --hi-radius-xs: 3px;
-  --hi-radius-sm: 5px;
-  --hi-radius-md: 7px;
-  --hi-radius-lg: 10px;
-  --hi-radius-xl: 15px;
+  --hi-radius-xs: 0px;
+  --hi-radius-sm: 0px;
+  --hi-radius-md: 0px;
+  --hi-radius-lg: 0px;
+  --hi-radius-xl: 0px;
 }
 
 * {
   box-sizing: border-box;
+  border-radius: 0 !important;
 }
 
 html {
@@ -41,11 +42,18 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--hi-text);
-  background-color: var(--checkout-background, var(--hi-color-gray)) !important;
+  background-color: #FDFDFD !important;
   height: auto;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #E5E5E5;
+  margin: var(--hi-spacing-md) 0;
 }
 
 h1, h2, h3 {
