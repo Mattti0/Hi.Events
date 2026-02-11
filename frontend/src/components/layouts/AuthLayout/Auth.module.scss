@@ -160,12 +160,37 @@
 .noise {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.3;
-  mix-blend-mode: soft-light;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='2.4' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size: 160px 160px;
+  background-image: url("/images/backgrounds/nightlife-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(110%);
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 95, 204, 0.8) 0%,
+    rgba(29, 29, 31, 1) 100%
+  );
+  opacity: 0.9;
+}
+
+// Grid pattern overlay
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+// Subtle glow effects (Disabled for minimalism)
+.glowEffect {
+  display: none;
 }
 
 .rings {

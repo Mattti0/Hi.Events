@@ -12,20 +12,20 @@ interface CheckoutThemeProviderProps {
  * Users can only customize accent color, not the base palette.
  */
 const LIGHT_PALETTE = {
-    surface: '#ffffff',
-    background: '#f8f9fa',
-    textPrimary: '#1a1a1a',
-    textSecondary: '#525252',
-    textTertiary: '#737373',
-    border: '#e5e7eb',
+    surface: '#FDFDFD',
+    background: '#FDFDFD',
+    textPrimary: '#1D1D1F',
+    textSecondary: '#757575',
+    textTertiary: '#757575',
+    border: '#E5E5E5',
 };
 
 const DARK_PALETTE = {
-    surface: '#1f1f1f',
-    background: '#121212',
-    textPrimary: '#ffffff',
-    textSecondary: '#a3a3a3',
-    textTertiary: '#737373',
+    surface: '#1D1D1F',
+    background: '#1D1D1F',
+    textPrimary: '#FDFDFD',
+    textSecondary: '#E5E5E5',
+    textTertiary: '#757575',
     border: '#333333',
 };
 
@@ -81,6 +81,8 @@ function createCheckoutTheme(accentColor: string, mode: 'light' | 'dark'): Manti
             primary: primaryColors,
         },
         primaryShade: mode === 'dark' ? 6 : 7,
+        fontFamily: 'Inter, sans-serif',
+        defaultRadius: 0,
         components: {
             Button: {
                 defaultProps: {

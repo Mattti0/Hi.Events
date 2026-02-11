@@ -4,10 +4,8 @@ import {t} from "@lingui/macro";
 import {useGetMe} from "../../../queries/useGetMe.ts";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {LanguageSwitcher} from "../../common/LanguageSwitcher";
-import {useCallback, useRef} from "react";
-import {getConfig} from "../../../utilites/config.ts";
 import {isHiEvents} from "../../../utilites/helpers.ts";
-import {showInfo} from "../../../utilites/notifications.tsx";
+import {Logo} from "../../common/Logo";
 
 const tickerFeatures = [
     t`Recurring events`,
@@ -124,19 +122,6 @@ const FeaturePanel = () => {
 
 const AuthLayout = () => {
     const me = useGetMe();
-    const clickCountRef = useRef(0);
-    const clickTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-
-    const handleLogoClick = useCallback(() => {
-        clickCountRef.current += 1;
-        clearTimeout(clickTimerRef.current);
-        clickTimerRef.current = setTimeout(() => { clickCountRef.current = 0; }, 2000);
-
-        if (clickCountRef.current >= 5) {
-            clickCountRef.current = 0;
-            showInfo(`HiEvents v${__APP_VERSION__}`);
-        }
-    }, []);
 
     if (me.isSuccess) {
         return <Navigate to={'/manage/events'} />
@@ -147,11 +132,8 @@ const AuthLayout = () => {
             <div className={classes.splitLayout}>
                 <div className={classes.leftPanel}>
                     <main className={classes.container}>
-                        <div className={classes.logo} onClick={handleLogoClick} style={{cursor: 'pointer'}}>
-                            <img
-                                src={getConfig("VITE_APP_LOGO_DARK", "/logos/hi-events-horizontal-light.svg")}
-                                alt={t`${getConfig("VITE_APP_NAME", "Hi.Events")} logo`}
-                            />
+                        <div className={classes.logo}>
+                            <Logo />
                         </div>
                         <div className={classes.formArea}>
                             <div className={classes.wrapper}>

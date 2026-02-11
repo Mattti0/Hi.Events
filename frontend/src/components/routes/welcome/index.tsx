@@ -24,6 +24,7 @@ import {Callout} from "../../common/Callout";
 import {getConfig} from "../../../utilites/config.ts";
 import {trackEvent, AnalyticsEvents} from "../../../utilites/analytics.ts";
 import {getDateTimePickerFormat} from "../../../utilites/dates.ts";
+import {Logo} from "../../common/Logo";
 
 export const CreateOrganizer = ({progressInfo}: {
     progressInfo?: { currentStep: number, totalSteps: number, progressPercentage: number }
@@ -529,7 +530,7 @@ const Welcome = () => {
             <Container size="sm" className={classes.welcomeContent}>
                 <div className={classes.welcomeHeader}>
                     <div className={classes.logo}>
-                        <img src={getConfig("VITE_APP_LOGO_LIGHT", "/logos/hi-events-text-dark.svg")} alt={`${getConfig("VITE_APP_NAME", "Hi.Events")} logo`} className={classes.logo}/>
+                        <Logo />
                     </div>
                     <h1 className={classes.welcomeTitle}>
                         <Trans>
