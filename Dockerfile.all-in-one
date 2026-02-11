@@ -6,6 +6,13 @@ RUN apk add --no-cache yarn
 
 # Increase network timeout for slow ARM emulation builds
 RUN yarn config set network-timeout 600000
+ARG VITE_APP_NAME="ILMO."
+ARG VITE_APP_PRIMARY_COLOR="#005FCC"
+ARG VITE_APP_SECONDARY_COLOR="#1D1D1F"
+
+ENV VITE_APP_NAME=$VITE_APP_NAME
+ENV VITE_APP_PRIMARY_COLOR=$VITE_APP_PRIMARY_COLOR
+ENV VITE_APP_SECONDARY_COLOR=$VITE_APP_SECONDARY_COLOR
 
 COPY ./frontend/package.json ./frontend/yarn.lock ./
 

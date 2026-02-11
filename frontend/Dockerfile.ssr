@@ -4,6 +4,16 @@ FROM node:22-alpine AS deps
 
 WORKDIR /app
 
+RUN apk add --no-cache yarn
+
+ARG VITE_APP_NAME="ILMO."
+ARG VITE_APP_PRIMARY_COLOR="#005FCC"
+ARG VITE_APP_SECONDARY_COLOR="#1D1D1F"
+
+ENV VITE_APP_NAME=$VITE_APP_NAME
+ENV VITE_APP_PRIMARY_COLOR=$VITE_APP_PRIMARY_COLOR
+ENV VITE_APP_SECONDARY_COLOR=$VITE_APP_SECONDARY_COLOR
+
 COPY package.json yarn.lock ./
 
 RUN --mount=type=cache,target=/usr/local/share/.cache/yarn,sharing=locked \
