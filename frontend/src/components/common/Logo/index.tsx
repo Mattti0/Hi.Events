@@ -4,7 +4,7 @@ import { getConfig } from "../../../utilites/config";
 export const Logo: React.FC<{ light?: boolean, className?: string }> = ({ light, className }) => {
     const appName = getConfig("VITE_APP_NAME", "ILMO.");
     
-    if (appName === "ILMO.") {
+    if (appName.startsWith("ILMO.")) {
         return (
             <div className={className} style={{ 
                 fontFamily: 'Inter, sans-serif', 
