@@ -489,5 +489,9 @@
     "You have received a new message from": "Olet saanut uuden viestin lähettäjältä",
     "Reply to :name": "Vastaa lähettäjälle :name",
     "This message was sent via your organizer contact form.": "Tämä viesti lähetettiin järjestäjän yhteydenottolomakkeen kautta.",
-    "Your email confirmation code is:": "Sähköpostisi vahvistuskoodi on:"
+    "Your email confirmation code is:": "Sähköpostisi vahvistuskoodi on:",
+    "There are no tickets available. ' .\n                    'If you would like to assign a ticket to this attendee,' .\n                    ' please adjust the ticket's available quantity.": "Lippuja ei ole saatavilla. ' .\n                    Jos haluat määrittää lipun tälle osallistujalle,' .\n                    ' säädä lipun saatavilla olevaa määrää.",
+    "There are no tickets available. ' .\n                    'If you would like to assign a product to this attendee,' .\n                    ' please adjust the product's available quantity.": "Lippuja ei ole saatavilla. ' .\n                    Jos haluat määrittää tuotteen tälle osallistujalle,' .\n                    ' säädä tuotteen saatavilla olevaa määrää.",
+    "You must verify your account before you can update an event's status.\n                You can resend the confirmation by visiting your profile page.": "Sinun on vahvistettava tilisi ennen kuin voit päivittää tapahtuman tilaa.\n                Voit lähettää vahvistuksen uudelleen profiilisivultasi.",
+    "You must verify your account before you can update an organizer's status.\n                You can resend the confirmation by visiting your profile page.": "Sinun on vahvistettava tilisi ennen kuin voit päivittää järjestäjän tilaa.\n                Voit lähettää vahvistuksen uudelleen profiilisivultasi."
 }
