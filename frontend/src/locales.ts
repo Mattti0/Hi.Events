@@ -101,6 +101,8 @@ const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown
     hu: () => import("dayjs/locale/hu"),
     sk: () => import("dayjs/locale/sk"),
     el: () => import("dayjs/locale/el"),
+    fi: () => import("dayjs/locale/fi"),
+    se: () => import("dayjs/locale/se"),
 };
 
 export async function dynamicActivateLocale(locale: string) {
